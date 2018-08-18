@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Viral</title>
-    <link rel="stylesheet" href="C:\xampp\htdocs\viral\wp-content\themes\viral-tema\assets\css\bootstrap.min.css">
-    <link rel="stylesheet" href="C:\xampp\htdocs\viral\wp-content\themes\viral-tema\assets\css\all.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets\css\bootstrap.min.css">
+     
     <link rel="stylesheet" href="syle.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 </head>
 <style>
@@ -59,11 +59,12 @@
             </nav>
         </section>
         <section class="col-6 header__sec">
-            <nav class="col-5 nav_social">
+        <div class="row">
+        <nav class="col-5 nav_social">
                 <ul class="nav nav__main">
                     <li class="nav-item nav__item">
                         <a class="nav-link active nav__link" href="#">
-                        <i class="fab fa-facebook"></i><a href="https://facebook.com"></a>
+                        <i class="fab fa-facebook"></i><a href="https://facebook.com"></a> 
                         </a>
                     </li>
                     <li class="nav-item nav__item">
@@ -89,6 +90,16 @@
                     </li>
                 </ul>
             </nav>
+           <section class="col-7 input__search">
+            <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </section>
+        </section>
+        </div>
     </header>
     <div class="container-fluid">
         <div class="row"> 
@@ -101,7 +112,7 @@
             Publicidad
             </div>
             </div>
-    <div class="container-fluid"> 
+    <div class="container"> 
         <div class="row"> 
         <div class="footer col-12">
         <img src="viral2.png" class="img-fluid" alt="Viral Logo 2"> 
