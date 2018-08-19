@@ -6,80 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Viral</title>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets\css\bootstrap.min.css">
-     
     <link rel="stylesheet" href="syle.css">
-    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets\css\viral.css">
 </head>
-<style>
-    .container{
-        background-color: #FFFFFF;
-        text-align: center;
-        font-family: Tahoma;
-    } 
-    .principal{
-        background-color: #FFFFFF;
-        text-align: left;
-    } 
-    .sidebar{
-        background-color: #FFFFFF;
-    } 
-    .footer{
-        background-color: #000000;
-        text-align: center;
-        color: #FFFFFF;
-    }
-</style>
 <body>
-    <header class="row">
+    <header class="row header">
         <section class="col-6 header__main">
             <section class="col-12 header__logo"> 
-                <figure>
-                <img src="img\logo.png" class="img-fluid" alt="Viral Logo"/>
+                <figure class="header__logo__img" style="
+                margin: 1em auto;
+                ">
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets\img\logo.png" class="img-fluid" alt="Viral Logo"/>
                 </figure>
             </section>
             <nav class="col-12 header__nav"> 
-                <ul class="nav nav__main">
+                <ul class="nav nav__main j-center">
                     <li class="nav-item nav__item">
-                        <a class="nav-link active nav__link" href="#">Tecnología</a>
+                        <a class="nav-link nav__link t-black" href="#">Tecnología</a>
                     </li>
                     <li class="nav-item nav__item">
-                        <a class="nav-link active nav__link" href="#">YouTube</a>
+                        <a class="nav-link nav__link t-black" href="#">YouTube</a>
                     </li>
                     <li class="nav-item nav__item">
-                        <a class="nav-link active nav__link" href="#">Música</a>
+                        <a class="nav-link nav__link t-black" href="#">Música</a>
                     </li>
                     <li class="nav-item nav__item">
-                        <a class="nav-link active nav__link" href="#">Cine</a>
+                        <a class="nav-link nav__link t-black" href="#">Cine</a>
                     </li>
                     <li class="nav-item nav__item">
-                        <a class="nav-link active nav__link" href="#">Series</a>
+                        <a class="nav-link nav__link t-black" href="#">Series</a>
                     </li>
                 </ul>
             </nav>
         </section>
-        <section class="col-6 header__sec">
-        <div class="row">
+        <section class="col-6 header__sec d-flex a-center">
+        <div class="row full-width">
         <nav class="col-5 nav_social">
                 <ul class="nav nav__main">
                     <li class="nav-item nav__item">
                         <a class="nav-link active nav__link" href="#">
-                        <i class="fab fa-facebook"></i><a href="https://facebook.com"></a> 
+                        <i class="t-black fab fa-facebook"></i><a href="https://facebook.com"></a> 
                         </a>
                     </li>
                     <li class="nav-item nav__item">
                         <a class="nav-link active nav__link" href="#">
-                        <i class="fab fa-instagram"></i><a href="https://instagram.com"></a>
+                        <i class="t-black fab fa-instagram"></i><a href="https://instagram.com"></a>
                         </a>
                     </li>
                     <li class="nav-item nav__item">
                         <a class="nav-link active nav__link" href="#">
-                        <i class="fab fa-twitter-square"></i><a href="https://twitter"></a>
+                        <i class="t-black fab fa-twitter-square"></i><a href="https://twitter"></a>
                         </a>
                     </li>
                     <li class="nav-item nav__item">
                         <a class="nav-link active nav__link" href="#">
-                        <i class="fab fa-youtube-square"></i><a href="https://youtube.com"></a>
+                        <i class="t-black fab fa-youtube-square"></i><a href="https://youtube.com"></a>
 
                         </a>
                     </li>
@@ -112,12 +94,15 @@
             Publicidad
             </div>
             </div>
-    <div class="container"> 
-        <div class="row"> 
-        <div class="footer col-12">
-        <img src="viral2.png" class="img-fluid" alt="Viral Logo 2"> 
-        </div>
-        </div>
-    </div>  
+    <footer class="row"> 
+            <section class="col-12 header__logo" style="
+                background-color: black;"> 
+                <figure class="header__logo__img" style="
+                margin: 1em auto; 
+                ">
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets\img\logo2.png" class="img-fluid" alt="Viral Logo"/>
+                </figure>
+            </section>
+    </footer>  
 </body>
 </html>
