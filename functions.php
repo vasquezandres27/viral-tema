@@ -15,7 +15,7 @@ if(function_exists('register_nav_menus')) {
 ));
 }
 
-add_filter('nav_menu_link_attributes', 'clas_main_nav', 10, 3);
+add_filter('nav_menu_link_attributes', 'class_main_nav', 10, 3);
 function class_main_nav ( $atts, $item, $args) {
     $class = 'nav-link nav__link t-black';
     $atts ['class'] = $class;

@@ -62,7 +62,7 @@
 .nav__social .nav-link {
     padding: .2em;
   }
-.nav__main a {
+.nav__main {
     font-weight: bold;
   }
 .search__input {
@@ -87,4 +87,14 @@
 }
 .category__link:last-child {
     padding-right: 0
+}
+.card__title {    
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.card__text {   
+    font-size: 12px;
+
 }

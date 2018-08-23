@@ -30,25 +30,6 @@
             'menu_class' => 'nav-item nav__item',
         )) ?>
 
-            <nav class="col-12 header__nav"> 
-                <ul class="nav nav__main j-center">
-                    <li class="nav-item nav__item">
-                        <b><a class="nav-link nav__link t-black" href="#">Tecnología</a></b>
-                    </li>
-                    <li class="nav-item nav__item">
-                        <b><a class="nav-link nav__link t-black" href="#">YouTube</a></b>
-                    </li>
-                    <li class="nav-item nav__item">
-                        <b><a class="nav-link nav__link t-black" href="#">Música</a></b>
-                    </li>
-                    <li class="nav-item nav__item">
-                        <b><a class="nav-link nav__link t-black" href="#">Cine</a></b>
-                    </li>
-                    <li class="nav-item nav__item">
-                        <b><a class="nav-link nav__link t-black" href="#">Series</a></b>
-                    </li>
-                </ul>
-            </nav>
         </section>
         <section class="col-6 header__sec d-flex a-center">
       <div class="row full-width">
