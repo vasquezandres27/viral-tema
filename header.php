@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Viral</title>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets\css\bootstrap.min.css">
-    <link rel="stylesheet" href="syle.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets\css\viral.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>\assets\css\viral.css">
 </head>
 <body>
     <header class="row header">
@@ -20,6 +20,16 @@
                 <img src="<?php echo get_stylesheet_directory_uri() ?>/assets\img\logo.png" class="img-fluid" alt="Viral Logo"/>
                 </figure>
             </section>
+
+        <?php wp_nav_menu( array(
+            'theme_location' => 'header-menu',
+            'container' => 'nav',
+            'container_class' => 'col-12 header__nav',
+            'container_id' => '',
+            'items_wrap' => ' <ul class="nav nav__main j-center">%3$s</ul> ',
+            'menu_class' => 'nav-item nav__item',
+        )) ?>
+
             <nav class="col-12 header__nav"> 
                 <ul class="nav nav__main j-center">
                     <li class="nav-item nav__item">
