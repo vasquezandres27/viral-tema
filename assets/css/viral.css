@@ -22,13 +22,14 @@
         list-style: none;
     }
 /* # Theme */
-.t-white {color:#ffffffff}
-.t-black {color: black}
-.t-pink {color:#ff64e0}
+.t-white {color:#ffffffff;}
+.t-black {color: black;}
+.t-black:hover {color: rgb(0, 0, 0);}
+.t-pink {color:#ff64e0;}
 
-.b-white {background-color:#ffffffff}
-.b-black {background-color: black}
-.b-pink{background-color:#ff64e0}
+.b-white {background-color:#ffffffff;}
+.b-black {background-color: black;}
+.b-pink{background-color:#ff64e0;}
 
 .t-center{ text-align: center; }
 .e-center{

@@ -1,108 +1,33 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Viral</title>
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets\css\bootstrap.min.css">
-    <link rel="stylesheet" href="syle.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets\css\viral.css">
-</head>
-<body>
-    <header class="row header">
-        <section class="col-6 header__main">
-            <section class="col-12 header__logo"> 
-                <figure class="header__logo__img" style="
-                margin: 1em auto;
-                ">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets\img\logo.png" class="img-fluid" alt="Viral Logo"/>
-                </figure>
-            </section>
-            <nav class="col-12 header__nav"> 
-                <ul class="nav nav__main j-center">
-                    <li class="nav-item nav__item">
-                        <a class="nav-link nav__link t-black" href="#">Tecnología</a>
-                    </li>
-                    <li class="nav-item nav__item">
-                        <a class="nav-link nav__link t-black" href="#">YouTube</a>
-                    </li>
-                    <li class="nav-item nav__item">
-                        <a class="nav-link nav__link t-black" href="#">Música</a>
-                    </li>
-                    <li class="nav-item nav__item">
-                        <a class="nav-link nav__link t-black" href="#">Cine</a>
-                    </li>
-                    <li class="nav-item nav__item">
-                        <a class="nav-link nav__link t-black" href="#">Series</a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
-        <section class="col-6 header__sec d-flex a-center">
-        <div class="row full-width">
-        <nav class="col-5 nav_social">
-                <ul class="nav nav__main">
-                    <li class="nav-item nav__item">
-                        <a class="nav-link active nav__link" href="#">
-                        <i class="t-black fab fa-facebook"></i><a href="https://facebook.com"></a> 
-                        </a>
-                    </li>
-                    <li class="nav-item nav__item">
-                        <a class="nav-link active nav__link" href="#">
-                        <i class="t-black fab fa-instagram"></i><a href="https://instagram.com"></a>
-                        </a>
-                    </li>
-                    <li class="nav-item nav__item">
-                        <a class="nav-link active nav__link" href="#">
-                        <i class="t-black fab fa-twitter-square"></i><a href="https://twitter"></a>
-                        </a>
-                    </li>
-                    <li class="nav-item nav__item">
-                        <a class="nav-link active nav__link" href="#">
-                        <i class="t-black fab fa-youtube-square"></i><a href="https://youtube.com"></a>
-
-                        </a>
-                    </li>
-                    <li class="nav-item nav__item">
-                        <a class="nav-link active nav__link" href="#">
-                        
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-           <section class="col-7 input__search">
-            <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
-                    </div>
+<?php get_header() ?>
+        <section class="content col-9"> 
+            <section class= "category">
+            <div class="row">
+            <?php
+                $args = array( 'post_type' => 'post', 'post_per_page' => 3 );
+                $col_the_query = new WP_Query( $args );
+                if ( $col_the_query ->have_posts() ) : 
+                    while ( $col_the_query ->have_posts() ) : $col_the_query->the_post(); ?>
+                    <a href="<?php the_permalink()?>" class="col-4 t-black">
+                        <div class="card">
+                            <figure class="card-img-top"> 
+                                <?php
+                                    if ( has_post_thumbnail() ) :
+                                        the_post_thumbnail();
+                                    endif;
+                                ?> 
+                            </figure>
+                            <div class="card-body">
+                                <h5 class="card-title"><?php the_title()?></h5>
+                                <p class="card-text"><?php the_excerpt()?></p>
+                            </div>
+                        </div>
+                    </a>
+                <?php endwhile; endif; wp_reset_postdata(); ?>
                 </div>
-            </section>
         </section>
-        </div>
-    </header>
-    <div class="container-fluid">
-        <div class="row"> 
-            <div class="principal col-8">
-            </div>
-            <div class="principal col-8">
-            Tecnología
-            </div>
-            <div class="sidebar col-4">
+            </section>  
+        <aside class="sidebar col-3">
             Publicidad
-            </div>
-            </div>
-    <footer class="row"> 
-            <section class="col-12 header__logo" style="
-                background-color: black;"> 
-                <figure class="header__logo__img" style="
-                margin: 1em auto; 
-                ">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets\img\logo2.png" class="img-fluid" alt="Viral Logo"/>
-                </figure>
-            </section>
-    </footer>  
-</body>
-</html>
+        </aside>    
+                
+<?php get_footer() ?>
