@@ -12,6 +12,7 @@ if(function_exists('register_nav_menus')) {
     register_nav_menus(array(
         'header-menu' => 'Menú principal',
         'social-menu' => 'Menú social',
+        'footer-menu' => 'Menú pie de página',
 ));
 }
 

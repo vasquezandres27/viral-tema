@@ -65,6 +65,9 @@
 .nav__main {
     font-weight: bold;
   }
+.nav__sec{
+    font-weight: bold;
+}
 .search__input {
     border: 2px solid #000000;
   }
